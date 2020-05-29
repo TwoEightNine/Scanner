@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/ivClear"
+            android:src="@drawable/ic_clear"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:layout_alignTop="@+id/etData"
+            android:layout_alignBottom="@+id/etData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:id="@+id/etData"
+            android:textCursorDrawable="@drawable/shape_cursor"
+            android:hint="@string/create_data_hint"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="16dp"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:background="@null"
+            android:lines="5"
+            android:maxLines="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tvCounter"
+            android:textSize="12sp"
+            android:textColor="@color/textOther"
+            android:layout_below="@+id/etData"
+            android:layout_alignStart="@+id/etData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="13 symbols"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreate"
+            android:layout_below="@+id/etData"
+            android:backgroundTint="@color/textMain"
+            app:backgroundTint="@color/textMain"
+            android:text="@string/create_button"
+            android:layout_alignEnd="@+id/etData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <TextView
+            android:id="@+id/tvCodesTitle"
+            android:layout_below="@+id/btnCreate"
+            android:textColor="@color/textMain"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCodes"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/tvCodesTitle"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

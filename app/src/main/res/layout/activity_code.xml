@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+            android:id="@+id/svContent"
+            android:layout_below="@+id/toolbar"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvData"
+                    android:layout_margin="16dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/textMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="htps dsfosf eofdeo haid haoi"/>
+
+            <TextView
+                    android:id="@+id/tvDate"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/textOther"
+                    android:layout_below="@+id/tvData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="htps dsfosf eofdeo haid haoi"/>
+
+            <ImageView
+                    android:id="@+id/ivCopy"
+                    android:layout_margin="6dp"
+                    android:layout_below="@+id/tvData"
+                    android:layout_alignEnd="@+id/tvData"
+                    android:src="@drawable/ic_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <ImageView
+                    android:id="@+id/ivShareData"
+                    android:layout_margin="6dp"
+                    android:layout_below="@+id/tvData"
+                    android:layout_toStartOf="@+id/ivCopy"
+                    android:src="@drawable/ic_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                    android:id="@+id/rlCode"
+                    android:layout_marginTop="24dp"
+                    android:layout_below="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/ivCode"
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        tools:text="htps dsfosf eofdeo haid haoi"/>
+
+                <ImageView
+                        android:id="@+id/ivDownload"
+                        android:layout_margin="6dp"
+                        android:layout_below="@+id/ivCode"
+                        android:layout_alignEnd="@+id/ivCode"
+                        android:src="@drawable/ic_file_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <ImageView
+                        android:id="@+id/ivShareCode"
+                        android:layout_margin="6dp"
+                        android:layout_below="@+id/ivCode"
+                        android:layout_toStartOf="@+id/ivDownload"
+                        android:src="@drawable/ic_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                        android:backgroundTint="@color/textMain"
+                        app:backgroundTint="@color/textMain"
+                        android:id="@+id/btnAddToLibrary"
+                        android:layout_below="@+id/ivCode"
+                        android:visibility="gone"
+                        android:text="@string/code_add_to_library"
+                        android:layout_alignStart="@+id/ivCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/tvError"
+                    android:textSize="16sp"
+                    android:layout_margin="32dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textError"
+                    android:gravity="center"
+                    android:layout_below="@+id/tvDate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    tools:text="encoder not found for RSS_HUY na!"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

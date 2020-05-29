@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="#333"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <global.msnthrp.scanner.view.ScannerView
+            android:id="@+id/scannerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCodes"
+            android:overScrollMode="never"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/ivInfo"
+            android:layout_margin="16dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_info_outline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>

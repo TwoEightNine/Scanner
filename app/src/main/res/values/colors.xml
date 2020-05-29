@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#fff</color>
+    <color name="primaryDark">#fff</color>
+    <color name="accent">#fff</color>
+
+    <color name="toolbar">#fff</color>
+    <color name="toolbarText">#333</color>
+    <color name="background">#fff</color>
+    <color name="icons">#333</color>
+    <color name="iconsMinor">#666</color>
+
+    <color name="navigationBar">#afff</color>
+    <color name="statusBar">#afff</color>
+
+    <color name="textMain">#333</color>
+    <color name="textError">#C43A3A</color>
+    <color name="textOther">#666</color>
+    <color name="textDisabled">#bbb</color>
+
+    <color name="switchThumb">#aaa</color>
+    <color name="switchTrack">#ccc</color>
+    <color name="switchThumbChecked">#333</color>
+
+</resources>

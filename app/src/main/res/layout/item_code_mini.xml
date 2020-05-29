@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        android:background="?selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="#333"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+    <TextView
+            android:id="@+id/tvData"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            tools:text="https://blablabla.bla/hdurh/afajdasdas.oi"/>
+
+    <TextView
+            android:id="@+id/tvMeta"
+            android:layout_below="@+id/tvData"
+            android:layout_marginTop="2dp"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:alpha="0.7"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="scanned aztec"/>
+
+    <TextView
+            android:id="@+id/tvDate"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:alpha="0.5"
+            android:layout_alignTop="@+id/tvMeta"
+            android:layout_alignBottom="@+id/tvMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="13:34"/>
+
+</RelativeLayout>

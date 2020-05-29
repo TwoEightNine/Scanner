@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Scanner</string>
+    <string name="app_name_with_version">Scanner %s</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+
+    <string name="menu_scan">Scan</string>
+    <string name="menu_library">Library</string>
+    <string name="menu_create">Create</string>
+
+    <string name="scan_credit">powered by zxing</string>
+    <string name="scan_permission">Scanner needs access to camera for scanning codes</string>
+
+    <string name="code_meta_scanned">Scanned %s</string>
+    <string name="code_meta_created">Created %s</string>
+    <string name="code_add_to_library">Add to library</string>
+    <string name="code_added">Code successfully added to the library</string>
+
+    <string name="create_data_hint">Enter your data here</string>
+    <string name="create_codes_list_title">%d codes available for your data</string>
+    <string name="create_button">Generate codes</string>
+    <string name="create_counter">%d symbols</string>
+    <!--<string name="e">%d symbols</string>-->
+
+    <string name="about_libraries">Libraries</string>
+    <string name="about_libraries_zxing">Zxing (GitHub)</string>
+    <string name="about_icons">Icons</string>
+    <string name="about_icons_pixel_perfect">Pixel perfect (flaticon.com)</string>
+    <string name="about_icons_dmitri13">dmitri13 (flaticon.com)</string>
+    <string name="about_author">Author</string>
+    <string name="about_author_play_store">TwoEightNine (Play Store)</string>
+    <string name="about_author_github">TwoEightNine (GitHub)</string>
+
+</resources>
