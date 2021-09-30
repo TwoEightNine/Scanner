@@ -33,5 +33,6 @@
     <string name="about_author">Author</string>
     <string name="about_author_play_store">TwoEightNine (Play Store)</string>
     <string name="about_author_github">TwoEightNine (GitHub)</string>
+    <string name="about_privacy_policy">Privacy Policy (GitHub)</string>
 
 </resources>

@@ -18,6 +18,7 @@ class AboutActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setTitle(getString(R.string.app_name_with_version, BuildConfig.VERSION_NAME))
         mapOf(
+            llPrivacyPolicy to URL_PRIVACY_POLICY,
             llIconsPixel to URL_ICONS_PIXEL,
             llIconsDmitri to URL_ICONS_DMITRI,
             llLibraryZxing to URL_ZXING,
@@ -41,6 +42,7 @@ class AboutActivity : BaseActivity() {
 
         const val URL_ZXING = "https://github.com/zxing/zxing"
 
+        const val URL_PRIVACY_POLICY = "https://github.com/TwoEightNine/Scanner#privacy-policy"
         const val URL_AUTHOR_GIT = "https://github.com/TwoEightNine/"
         const val URL_AUTHOR_PLAY = "https://play.google.com/store/apps/developer?id=TwoEightNine"
 

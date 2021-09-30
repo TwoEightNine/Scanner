@@ -3,7 +3,7 @@
 ### Privacy policy
 
 Scanner by itself has an access to camera only for scanning codes. If you deny access to camera the application 
-still provides features of creating codes with your input.
+still provides features of creating codes with your input and watching a library of scanned and created codes.
 
 Scanner does not require and does not have an access to the Internet so be sure that Scanner does not 
 send your private data to third parties.
@@ -23,4 +23,4 @@ Scanner uses free icons licenced by [CC 3.0 BY](http://creativecommons.org/licen
 
 [Click here](https://play.google.com/store/apps/developer?id=TwoEightNine) to check other applications by TwoEightNine.
 
-##### Scanner, 2020 
+##### Scanner, 2021 
