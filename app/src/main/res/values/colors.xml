@@ -17,6 +17,7 @@
     <color name="textError">#C43A3A</color>
     <color name="textOther">#666</color>
     <color name="textDisabled">#bbb</color>
+    <color name="textLink">#1440B5</color>
 
     <color name="switchThumb">#aaa</color>
     <color name="switchTrack">#ccc</color>

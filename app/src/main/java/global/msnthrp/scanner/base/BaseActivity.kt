@@ -1,5 +1,6 @@
 package global.msnthrp.scanner.base
 
+import android.content.res.Configuration
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
@@ -27,10 +28,17 @@ abstract class BaseActivity : AppCompatActivity() {
         window.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.background)))
         setContentView(getLayoutId())
 
+        val isLightTheme = resources.configuration.uiMode and
+                Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_NO
+
+        val statusBarFlag = when {
+            isLightTheme -> View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            else -> 0
+        }
         window.decorView.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
                     View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
-                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+                    statusBarFlag
         window.statusBarColor = getStatBarColor()
 
         if (Build.VERSION.SDK_INT >= 26) {

@@ -24,7 +24,7 @@
                     android:layout_margin="16dp"
                     android:textSize="18sp"
                     android:textColor="@color/textMain"
-                    android:textColorLink="#03b"
+                    android:textColorLink="@color/textLink"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="htps dsfosf eofdeo haid haoi"/>
