@@ -5,6 +5,9 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.Environment
+import android.text.Html
+import android.text.method.LinkMovementMethod
+import android.util.Patterns
 import android.view.Menu
 import android.view.MenuItem
 import androidx.lifecycle.ViewModelProvider
@@ -45,7 +48,16 @@ class CodePreviewActivity : BaseActivity() {
                 R.string.code_meta_created
             }
             setTitle(getString(metaRes, code.codeType))
-            tvData.text = code.data
+
+            val isUrl = Patterns.WEB_URL.matcher(code.data).matches()
+            tvData.text = when {
+                isUrl -> Html.fromHtml(wrapAsHtmlLink(code.data))
+                else -> code.data
+            }
+            if (isUrl) {
+                tvData.movementMethod = LinkMovementMethod.getInstance()
+            }
+
             tvDate.text = code.timeStamp.toStringTime()
 
             val format = BarcodeFormat.valueOf(code.codeType)
@@ -96,6 +108,8 @@ class CodePreviewActivity : BaseActivity() {
     }
 
     private fun isCode2D(format: BarcodeFormat) = format in formats2D
+
+    private fun wrapAsHtmlLink(url: String): String = "<a href=\"$url\">$url</a>"
 
     companion object {
 
