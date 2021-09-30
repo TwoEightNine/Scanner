@@ -1,4 +1,4 @@
-## Scanner 0.1
+## Scanner 0.2
 
 ### Privacy policy
 
