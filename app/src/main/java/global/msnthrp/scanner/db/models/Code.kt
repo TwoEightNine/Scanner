@@ -21,6 +21,11 @@ data class Code(
     @ColumnInfo(name = "is_scanned")
     val isScanned: Boolean,
 
+    val name: String? = null,
+
+    @ColumnInfo(name = "is_favorite")
+    val isFavorite: Boolean = false,
+
     @ColumnInfo(name = "time_stamp")
     val timeStamp: Long = System.currentTimeMillis()
 
