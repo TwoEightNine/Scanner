@@ -96,15 +96,13 @@ class CodePreviewActivity : BaseActivity() {
                 shareImage(this, it, code?.data)
             }
         }
-        btnAddToLibrary.setOnClickListener {
+        svContent.setBottomInsetPadding()
+
+        if (couldBeSaved) {
             code?.also {
                 viewModel.addToLibrary(it)
             }
-            Snackbar.make(svContent, R.string.code_added, Snackbar.LENGTH_LONG).show()
-            btnAddToLibrary.hide()
         }
-        btnAddToLibrary.setVisible(couldBeSaved)
-        svContent.setBottomInsetPadding()
     }
 
     private fun isCode2D(format: BarcodeFormat) = format in formats2D
