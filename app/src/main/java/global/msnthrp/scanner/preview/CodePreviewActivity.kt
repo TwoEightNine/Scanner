@@ -36,6 +36,7 @@ class CodePreviewActivity : BaseActivity() {
         ViewModelProvider.NewInstanceFactory().create(CodePreviewViewModel::class.java)
     }
     private var codeBitmap: Bitmap? = null
+    private var brightnessBefore: Float? = null
 
     override fun getLayoutId() = R.layout.activity_code
 
@@ -96,6 +97,9 @@ class CodePreviewActivity : BaseActivity() {
                 shareImage(this, it, code?.data)
             }
         }
+        ivCode.setOnClickListener {
+            toggleBrightness()
+        }
         svContent.setBottomInsetPadding()
 
         if (couldBeSaved) {
@@ -108,6 +112,20 @@ class CodePreviewActivity : BaseActivity() {
     private fun isCode2D(format: BarcodeFormat) = format in formats2D
 
     private fun wrapAsHtmlLink(url: String): String = "<a href=\"$url\">$url</a>"
+
+    private fun toggleBrightness() {
+        val attrs = window.attributes
+        val brightnessBefore = brightnessBefore
+        if (brightnessBefore == null) {
+            this.brightnessBefore = attrs.screenBrightness
+            attrs.screenBrightness = 1f
+        } else {
+            attrs.screenBrightness = brightnessBefore
+            this.brightnessBefore = null
+        }
+        window.attributes = attrs
+
+    }
 
     companion object {
 
